@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac Man</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
+  
+
+    
+</head>
+<body>
+            <!--Inicio do container papai do site-->
+            <div class="container-fluid col-12 col-lg-12 col-md-12 mb-2 no-padding m-0 p-0">
+            <!--Inicio do menu-->
+        <div class="container-fluid" >
+            <div class="row">
+        <nav class="navbar navbar-transparent navbar-expand-lg  navbar-dark bg-dark
+         col-12 col-lg-12 col-md-12 mb-2 no-padding "> 
+            <div  class="brandtitle  ">
+            <a  class="navbar-brand mb-0 h1" id="funcaobrand"  href="#">
+                 
+                    <img class="rounded-circle" id="brand"
+             src="img/pacman_gif.gif" alt=""></a>
+            
+            </div>
+            <!--Fim do brand-->
+            <button class="navbar-toggler" type="buttom" data-toggle="collapse" data-target="#navbarSite">  
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div  class="navbar collapse navbar-collapse" id="navbarSite">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <div  class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" 
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
+                            aria-expanded="false">
+                            Jogo
+                            </button>
+                            <div class="dropdown-menu bg-light " 
+                            aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item " href="#">História</a>
+                              <a class="dropdown-item " href="#">versão Original</a>
+                              <a class="dropdown-item " href="#">Versão Antiga</a>
+                             
+                            </div>
+                          </div>
+                    <li class="nav-item">
+                        <a class="a:hover nav-link" href="#">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HighScore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Comunidade</a>
+                    </li>
+                  
+                </ul>        
+            </div>
+           
+            <div class="dropdown p-0" >
+                <button class="btn btn-dark dropdown-toggle" type="button" 
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe"></i>
+    
+    
+                </button>
+                <div class="dropdown-menu  float:left" style="margin-right: 15px;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Português</a>
+                  <a class="dropdown-item" href="#">Inglês</a>
+                  <a class="dropdown-item" href="#">Espanhol</a>
+                </div>
+              </div>
+              <div class=" col-12 col-lg-1 col-md-12 mb-2 no-padding m-0 p-0" ></div>
+        </nav>
+       
+         
+       <!--fim da barra de navegação--> 
+    </div>
+    </div>    
+     <!--fim do primeiro container--> 
+        <!--Inicio background-Attachment-->
+        <div class="container-fluid ">
+            <div class="row">
+       <div class="col-12 col-lg-12 col-md-12 mb-2 no-padding bgpacman main">
+        <div class="bgpacmanText"> <strong><h1> SEJA UM DOS PRIMEIROS</h1></strong>
+        <h5>Quer entrar no Beta Fechado de PACMAN?</h5>
+        <h5>  Faça uma Conta IFMS rapidamente </h5>
+        <h5> vincule-a a uma conta Twitch,<h5> e assista as transmissões </h5><h5> para tentar entrar no
+
+        </h5><h5 id="finaltexto"> JOGO.</h5></div>
+        <div class="bgpacmanInput ">
+            <form class="bg-dark form-style text-white rounded-left"> 
+                <label><p><strong id="titulo">PACMAN</strong></p></label>
+           <p class="textformcadastro">Ainda não tenho uma Conta</p>                     
+           <input type="button" class="btn btn-outline-warning" value="Cadastro novo jogador"
+         > 
+           <p class="textformcadastro" id="cadastro">Tenho uma Conta</p>
+           <input type="button" class="btn btn-outline-warning" value="Entrar com uma conta">
+         
+     </form>
+    </div>  
+    </div>
+    <!--fim do segundo container-->
+</div>
+</div>
+    <!--fim do background attachment-->
+</div>
+    
+    <div class="container"> 
+        
+        <!--começo titulo inicial-->
+          <div class="row last-news mt-4">
+              
+          <div class="title-body col-12 col-lg-5 col-md-7 mb-2 no-padding "><p class="f-white bg-text" 
+           style="font-size:4rem;font-family: fantasy;"> Seis curiosidades sobre PACMAN:</p>
+        </div>
+
+        
+          <!--começo carousel-->
+          <div class="carousel slide col-12 col-lg-7 col-md-5 mb-10 no-padding " data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="img/img1_carousel.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img2_carousel.jpg" id="carousel-img" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img3_carousel.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <!--Fim do carousel-->
+        <!--Inicio do conteúdo da guia-->
+          <div ></div>
+          <div class="container p-3 mb-2 bg-light text-dark ">
+              <!--primeira linha foto-->
+              <div class="row">
+                <div class="bg-img1 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle"  >
+                        <h1 style="color: yellow;">1. O início de tudo</h1>
+                    <p  style="font-size: 27px;margin-left: 20px;"> primeiro jogo foi desenvolvido
+                         para a empresa Namco pelo japonês Toru Iwatani, 
+                        que também chegou a desenvolver outros jogos, embora nenhum tenha atingido o
+                         mesmo sucesso do Pac-Man.</p></div>
+                      </div>  
+            </div>
+              <!-- segunda foto-->
+              <div class="row">
+                <div class="bg-img2 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle "style="float:right;" >
+                        <h1 style="color: yellow;">2.E nas Telas</h1>
+                    <p  style="font-size: 20px;margin-left: 20px;">No ano de 1982,
+                        os estúdios Hanna-Barbera transformaram o jogo em desenho animado e Pac-Man 
+                        foi parar na televisão, mas a série teve apenas 2 temporadas. Porém, em 2013 o
+                         personagem voltou à TV em Pac-Man e as Aventuras Fantasmagóricas. Já nos cinemas,
+                          ele foi um dos protagonistas do filme Pixels em 2015, além de ter recebido 
+                          referências em outros filmes voltados ao público gamer, como Scott Pilgrim 
+                          contra o mundo (2010) e Detona Ralph (2012).</p></p></div>
+                      </div>  
+            </div>
+              <!--terceira foto-->
+              <div class="row">
+                <div class="bg-img3 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle"  >
+                        <h1 style="color: yellow;">3. Mudanças no nome</h1><p>quando foi criado, o personagem 
+                            recebeu o nome de Pakkuman. Já no ocidente, o nome foi adaptado para Puck-Man, já que 
+                            ele se parecia com um disco de hóquei (puck). Porém, esse nome foi alterado quando os 
+                            desenvolvedores perceberam que vândalos poderiam facilmente alterar  os nomes nos
+                             fliperamas. Já no Brasil, o personagem ganhou o apelido de Come-Come.</p></div>
+                      </div>  
+            </div>
+              <!-- quarta foto-->
+              <div class="row">
+                <div class="bg-img4 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle" style="float: right;"  >
+                        <h1 style="color: yellow;">4. Pac-Man virou música</h1><p>Em dezembro de 1981 a dupla
+                            Buckner & Garcia lançou a música “Pac-Man Fever”, que alcançou o 9º lugar nas paradas 
+                            de sucesso da Billboard. O single vendeu mais de 2,5 milhões de cópias.</p></div>
+                      
+                      </div>  
+            </div>
+              <!-- quinta foto-->
+              <div class="row">
+                <div class="bg-img5 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle"  > 
+                        <h1 style="color: yellow;">5. Continuações</h1><p>Em 1981 foi lançado o 
+                            título Ms. Pac-Man, 
+                            uma versão feminina que é esposa do personagem. Logo depois foi a vez 
+                            do Pac-Man Jr.,
+                             que usava um boné com hélice. Já em 1994, a Namco lançou Pac-Man 2: 
+                             The New Adventures
+                              para Super Nintendo e Mega Drive.
+                            Mais recentemente, em 2010, foi lançado Pac-Man Championship Edition DX, 
+                            uma releitura
+                             multicolorida e competitiva do jogo clássico com versões para fliperamas, 
+                             celulares e PC.</p></div>
+                      </div>  
+            </div>
+              <!-- sexta foto-->
+              <div class="row">
+                <div class="bg-img6 rounded ">
+                    <div class="square-left1 bg-dark  rounded-circle"style="float:right;margin-bottom:20px;" >
+                        <h1 style="color: yellow;">                   
+                        6. Fenômeno de vendas</h1><p>Pac-Man foi o jogo mais vendido para o console
+                             Atari 2600.
+                            Com mais de 7 milhões de cópias vendidas, supera com tranquilidade o segundo
+                             colocado:
+                             Pitfall. Já o game Ms. Pac-Man foi o 12º jogo mais vendido para Mega Drive.
+                              Na era dos smartphones, o Come-come também fez um baita sucesso, com mais de 30 
+                              milhões de jogos vendidos nos Estados Unidos.
+                             </p></div>
+                      </div>  
+            </div>
+            
+
+            </div>
+            <!--fim da primeiro texto-->
+             
+    
+    
+ <!--espaço final dos containers-->   
+        </div>
+ </div>
+ <!--começo do pé do site-->
+<div class="footer" >
+    <div class="card text-center ">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Aproveite todo contéudo</h5>
+          <p>
+          <a style="margin-right: 4px;" href="#">Termo de serviço</a> <a href="#">Política de privacidade</a></p>
+          <a href="#" class="btn btn-dark">Voltar para cima</a>
+        </div>
+        <div class="card-footer text-muted">
+         <img src="img/classificação indicativa.png" alt="">
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!--fim do container pai do site-->
+</div>     
+</body>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"> </script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/efeitos.js"></script>
+    <script src="/fontawesome-free-5.13.0-web/js/all.js"></script>
+    <script src="/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+   
+</html>

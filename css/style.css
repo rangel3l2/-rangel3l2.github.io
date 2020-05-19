@@ -1,0 +1,232 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    
+}
+
+
+.brandtitle{
+    width: 80px;
+    height: 40px;
+    transition: ease-in-out;       
+    display: block;
+    margin-bottom: 10px;
+}
+/*efeitos da navbar */
+.brandtitle :hover{
+    transform: rotate3d(90);
+    transition: 1s;
+   
+        
+   
+    
+}
+#brand{
+    width: 80px;
+    height: 40px;
+}
+
+
+
+.bgpacman{
+    background-image: url("../img/bgpacman.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 500px; 
+    margin-top: -20px;
+    
+}
+.bgpacmanText{
+    
+    
+    width: 30%;
+    margin-left: 40px;
+    color: whitesmoke;
+    font-family:fantasy;
+    text-align: left;
+   float: left;   
+    display: block;
+    margin-top: 100px;
+    
+  
+  
+   
+}
+.bgpacmanInput{
+   float: right;
+   height: 300px;
+   border-radius: 10px;
+   border-top: white 5px solid;  
+   margin-right: 80px;
+   margin-top:25px ;
+   border-bottom: white 5px solid; 
+   
+   
+}
+#carousel-img{
+    height: 300px;
+}
+#titulo{
+    float: left;
+    color: orange;
+    
+    font-family:fantasy;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.form-style{
+    text-align: center;
+    height: 100%;
+   
+    
+}
+.textformcadastro{
+    margin-top: 5px;
+    width: 250px;
+
+}
+#finaltexto{
+    float: left;    
+    font-family:fantasy;
+    font-size: 40px;
+}
+.carousel{
+    margin-top: 20px;
+    float: right;
+    width: 500px;
+    height: 400px;
+}
+/*arquivo aula alex*/
+.titlebody{
+    font-family:fantasy;
+    padding: 4px;
+    font-weight: bolder;
+    border-radius: 15px;
+    width: 40%;
+    margin-top: 20px;
+    line-height: 100px;
+   font-size: 69px;
+    height: 90px;
+    color: black;
+  
+    
+
+}
+
+.bg-img1{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+
+}
+.bg-img2{
+    float: left;
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+    margin-top: 20px;
+}
+.bg-img3{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+    margin-top: 20px;
+    float: left;
+}
+.bg-img4{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+    margin-top: 20px;
+    float: left;
+}
+.bg-img5{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+    margin-top: 20px;
+    float: left;
+}
+.bg-img6{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/pacmanbg6hd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: 400px; 
+    margin-top: 20px;
+    float: left;
+}
+
+
+.square-left1{
+        color: white;
+        float: left;
+       
+         width: 400px;
+         height: 400px;
+         font-family: fantasy;
+         
+}
+.square-left{
+
+    float: left;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;  
+    margin-top: 370px;
+  
+
+}
+.square-right{
+    margin-top: 150px;
+    float: right;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    margin-left: 35px;
+    margin-top: 330px;
+    margin-bottom:100px;
+}
+
+p{
+    margin-left: 8px;
+    font-size: 20px;
+}
+.line3{
+    height: 10px;
+    background-color: white;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+.footer{
+    float: left;
+    width: 100%;
+}
