@@ -122,7 +122,7 @@ var world = [
             dxr=0
             dyu=0
             dyd=0
-        
+           
             moveLeft()
            
 
@@ -312,9 +312,13 @@ var world = [
     function eat(){
         if (world[covid.y][covid.x] == 2){
            world[covid.y][covid.x] = 0;
+         
            scoreBehaviour();
            drawWorld();
-			displayScore();
+            displayScore();
+            const audio = document.getElementById('comer')
+            audio.play();
+            
            
         }
 
