@@ -82,7 +82,7 @@ var world = [
     }
     //caminho inicial do código
     window.addEventListener("load",main);
-    // inicio do código 
+    //1. inicio do código 
 
     function main(){    
      
@@ -95,7 +95,7 @@ var world = [
     
 //eventos iniciais
     function Start(){
-        addEventListener("keydown",mykeyBoard);
+        addEventListener("keydown",mykeyBoard,false);
         document.querySelector('#iniciar').style.display="none";   
             
      drawWorld()
@@ -106,23 +106,23 @@ var world = [
     const btn_up=38;
     const btn_down=40;
     var dxr=0,dxl=0,dyu=0,dyd=0;
-    const Timer =300;
-    let interLeft,interRight,interUp,interDown,pressTime
+    const Timer =500;
+    let interLeft,interRight,interUp,interDown;
+    let pressTime=0
 	function mykeyBoard(e){
 		//document.getElementById('covid').style.left = 50+"px";
         //console.log(covid.x);
         
         if(e.keyCode == btn_left){
+            
             pressTime++;
-            if(pressTime>=1)
-            {
-                console.log('Double control')
-            }
+          
+            setTimeout(() => (pressTime = 0), Timer)
             dxl=1
             dxr=0
             dyu=0
             dyd=0
-            
+        
             moveLeft()
            
 
@@ -130,7 +130,9 @@ var world = [
 }
         
         else if(e.keyCode == btn_right ){
-           
+            pressTime++;
+          
+            setTimeout(() => (pressTime = 0), Timer)
             dxl=0
             dxr=1
             dyu=0
@@ -149,7 +151,9 @@ var world = [
        
         else if(e.keyCode == btn_up ){
 
-            
+            pressTime++;
+          
+            setTimeout(() => (pressTime = 0), Timer)
             dxr=0
             dxl=0
             dyu=1
@@ -160,7 +164,9 @@ var world = [
         }
        
         else if(e.keyCode == btn_down){
+            pressTime++;
           
+            setTimeout(() => (pressTime = 0), Timer)
 		    dxr=0
             dxl=0
             dyu=0
@@ -217,7 +223,7 @@ var world = [
         
         if(world[covid.y][covid.x-1] != 1 && 
              world[covid.y][covid.x-1]!= 4 
-             && dxl==1                
+             && dxl==1 && pressTime==0               
             )
             {
                
@@ -238,7 +244,7 @@ var world = [
     }
     function allowMoveRight(){
         if( world[covid.y][covid.x+1] != 1 && covid.x<=world[0].length &&
-            world[covid.y][covid.x+1] != 4 && dxr==1)
+            world[covid.y][covid.x+1] != 4 && dxr==1 && pressTime==0   )
             {
                 document.getElementById('covid').style.transform = "none";
               
@@ -249,7 +255,7 @@ var world = [
     }
     function allowMoveUp(){
         if(world[covid.y-1][covid.x]!= 1 && covid.y > 0 &&
-            world[covid.y-1][covid.x] != 4 &&dyu==1) 
+            world[covid.y-1][covid.x] != 4 &&dyu==1 && pressTime==0   ) 
             {
                 document.getElementById('covid').style.transform = "rotate(-90deg)";
                
@@ -259,7 +265,7 @@ var world = [
     }
     function allowMoveDown(){
         if(world[covid.y+1][covid.x]  != 1 &&
-            world[covid.y+1][covid.x] != 4 && dyd==1)
+            world[covid.y+1][covid.x] != 4 && dyd==1 && pressTime==0   )
             {
                 document.getElementById('covid').style.transform = "rotate(90deg)";
                
