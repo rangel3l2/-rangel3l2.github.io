@@ -1,0 +1,100 @@
+
+
+
+div.row div{
+    width: 25px;
+    height: 25px;
+    display:inline-block;
+    margin-top: -2.29px;
+    margin-bottom: -1.5px;
+    
+}
+div.brick{
+    background-color:orangered;
+    background-image: url('bloco25px.png');
+   
+ 
+
+}
+div.meal{
+    background-image: url('bem25px.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: cover;*/
+}
+div.cherry{
+    background: url('cherry.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+div.covidLogo{
+    background-image: url('img/blocoCovid25px.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+}   
+div.limit{
+    background-color: yellow;
+} 
+div#covid{
+    background: url('denteio.gif');
+    transform: scale(5);    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+    width:40px;
+    height: 40px;
+   position: absolute;
+   left: 250PX;
+   top: 250PX;
+}
+
+
+div#score{
+    display: none;
+    width: 100px;
+    height: 100px;
+    color:black;
+    padding:7px;
+    border: grey solid 4px;
+    text-align: center;
+    font-family: 'ArcadeClassic';
+    float:right;
+    line-height: 35px;
+    margin-top:-450px;
+    
+    
+    position:absolute;
+    left: 600px;
+}
+h1{
+    padding: 20px;
+    color: yellow;
+    font-size: 2rem;
+  }
+  h2{
+    padding: 20px;
+    color: #fff;
+    font-size: 2rem;
+  }
+  p{
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 2rem;
+  }
+  #iniciar{
+      float: left;
+      display: block;
+      margin-left: 230px;
+      margin-top: 150px;
+      
+     
+
+
+      
+  }
