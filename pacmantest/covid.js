@@ -1,3 +1,4 @@
+//matrix dos elementos
 var world = [
         [5,5,5,5,5,5,5,5,5,5,5 ,5 ,5 ,5 ,5 ,5 ,5 ,5 ,5 ,5 ,5 ,5,5],
 	    [5,1,1,1,1,1,1,1,1,1,1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1,5], 
@@ -27,7 +28,7 @@ var world = [
 		x: 2,
 		y: 2
 	}
-    
+    //como o mapa é estruturado (seus elementos)
 	function drawWorld(){
 		var map = '';
 
@@ -59,9 +60,9 @@ var world = [
         
     }
    
-   
+    //o que é visivel em meu display
 
-	function displaycovid(){
+	function displayCovid(){
       
         
 
@@ -72,56 +73,58 @@ var world = [
 	
     
 
-}
-
-        
-        
+}         
 	
-
 	function displayScore(){
         
         document.getElementById('score').innerHTML = (`Score<br>${score}</br>`);
         document.querySelector('#score').style.display='block';
     }
+    //caminho inicial do código
     window.addEventListener("load",main);
+    // inicio do código 
+
     function main(){    
      
      document.querySelector('#iniciar').innerHTML =
       (`<input type="button"  value="play game">`)
          addEventListener("click",Start)        
-        
+         addEventListener("click",interval)
        
     }
     
-
+//eventos iniciais
     function Start(){
         addEventListener("keydown",mykeyBoard);
         document.querySelector('#iniciar').style.display="none";   
             
      drawWorld()
     }
-   
-    
-    
-    
+          
     const btn_left=37;
     const btn_right=39;
     const btn_up=38;
     const btn_down=40;
     var dxr=0,dxl=0,dyu=0,dyd=0;
-    let timer =1000;
+    const Timer =300;
+    let interLeft,interRight,interUp,interDown,pressTime
 	function mykeyBoard(e){
 		//document.getElementById('covid').style.left = 50+"px";
         //console.log(covid.x);
         
         if(e.keyCode == btn_left){
-            
+            pressTime++;
+            if(pressTime>=1)
+            {
+                console.log('Double control')
+            }
             dxl=1
             dxr=0
             dyu=0
             dyd=0
+            
             moveLeft()
-       
+           
 
 
 }
@@ -132,12 +135,13 @@ var world = [
             dxr=1
             dyu=0
             dyd=0
+           
             moveRight();
-        
+           
       
 
         }
-      
+        
             
           
            
@@ -151,7 +155,7 @@ var world = [
             dyu=1
             dyd=0
             
-           moveUp()
+            moveUp()
        
         }
        
@@ -161,7 +165,8 @@ var world = [
             dxl=0
             dyu=0
             dyd=1
-          
+        
+          moveDown()
           
        
         }
@@ -170,32 +175,44 @@ var world = [
 	
         //console.log(e.keyCode);
         
-		displaycovid();
+		displayCovid();
     }
+    //realizadas tarefas relacionados ao movimento do objeto pacman
     function moveLeft(){
         allowMoveLeft();                     
         crossWorldLeft();
-        displaycovid();
-        eat();     
+        displayCovid();
+        eat();  
+        
+        
+
+
                
     }
     function moveRight(){
         allowMoveRight();
         crossWorldRight();
-        displaycovid();        
+        displayCovid();        
         eat();
+       
+      
     }
     function moveUp(){
         allowMoveUp();
         crossWorldUp();
-        displaycovid(); 
+        displayCovid(); 
         eat();
+        
 
     }
     function moveDown(){
-
+        allowMoveDown();
+        crossWorldDown();
+        displayCovid(); 
+        eat();
+       
     }
-   
+   //condições para acontecer o movimento
     function allowMoveLeft(){
         
         if(world[covid.y][covid.x-1] != 1 && 
@@ -204,7 +221,9 @@ var world = [
             )
             {
                
+              
                 covid.x-=dxl;
+                
                   
                   
             
@@ -222,9 +241,10 @@ var world = [
             world[covid.y][covid.x+1] != 4 && dxr==1)
             {
                 document.getElementById('covid').style.transform = "none";
-
+              
                
                covid.x=covid.x+dxr;
+               
             }
     }
     function allowMoveUp(){
@@ -232,7 +252,7 @@ var world = [
             world[covid.y-1][covid.x] != 4 &&dyu==1) 
             {
                 document.getElementById('covid').style.transform = "rotate(-90deg)";
-              
+               
                 covid.y=covid.y-dyu;
                 
             } 
@@ -242,12 +262,13 @@ var world = [
             world[covid.y+1][covid.x] != 4 && dyd==1)
             {
                 document.getElementById('covid').style.transform = "rotate(90deg)";
-                
+               
                 covid.y=covid.y+dyd;
                 
             } 
 
     }
+    //eventos para atravessar o mundo
     function crossWorldLeft(){
         if(world[covid.y][covid.x-1] != 2 && covid.x < 1 && world[covid.y][covid.x-1] != 0){
 			document.getElementById('covid').style.transform = "rotate(-180deg)";
@@ -255,9 +276,9 @@ var world = [
             
             
           }
-        }
+    }
         
-        function crossWorldRight(){
+    function crossWorldRight(){
          if(world[covid.y][covid.x+1]!= 1 &&  covid.x > 0 && covid.x == world[0].length -1
              && world[covid.y][covid.x+1] != 4 && world[covid.y][covid.x+1] != 0 ){
 			document.getElementById('covid').style.transform = "none";
@@ -271,8 +292,8 @@ var world = [
     
     
                 }  
-            }   
-            function crossWorldDown(){
+    }   
+    function crossWorldDown(){
          if( world[covid.y+1]!= 1 && covid.y == world.length-1 && 
             world[covid.y+1]!= 4 || covid.y == world.length)
                    {
@@ -281,7 +302,7 @@ var world = [
             
     }
   
-  
+  //evento para comer os elementos
     function eat(){
         if (world[covid.y][covid.x] == 2){
            world[covid.y][covid.x] = 0;
@@ -292,7 +313,7 @@ var world = [
         }
 
    }
-    
+    //pontuações
    function scoreBehaviour(){
     if (world[covid.y][covid.x] == 0){
         
@@ -304,3 +325,12 @@ var world = [
   
 
 }
+//eventos de intervalo
+
+function interval(){
+     interLeft = setInterval(moveLeft, Timer);
+     interRight = setInterval(moveRight,Timer);
+     interUp = setInterval(moveUp,Timer);
+     interDown=setInterval(moveDown,Timer);
+}
+
