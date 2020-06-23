@@ -1,15 +1,19 @@
-
+body{
+    background-color: #036bfc;
+}
 div.container{
-    background-color: teal;
+   margin-left: 500px;
     
 }
 
 div.row div{
+
     width: 25px;
     height: 25px;
     display:inline-block;
-    margin-top: -2.29px;
+    margin-top: -2.60px;
     margin-bottom: -1.5px;
+    background-color: white;
     
 }
 div.brick{
@@ -64,6 +68,7 @@ div#covid{
    position: absolute;
    left: 250PX;
    top: 250PX;
+   transition: ease-in 200px 5s;
 }
 
 
@@ -79,6 +84,7 @@ div#score{
     float:right;
     line-height: 35px;
     margin-top:-450px;
+    background-color: white;
     
     
     position:absolute;

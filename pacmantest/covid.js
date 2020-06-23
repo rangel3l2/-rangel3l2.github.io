@@ -30,7 +30,7 @@ var world = [
     }
     const eaten = 0
     const brick3d = 4
-    const meal =2
+    const meal =2 
     const brick = 1
 
 
@@ -93,15 +93,7 @@ var world = [
     
     //1. inicio do código 
 
-    function main(){    
-     
-     document.querySelector('#iniciar').innerHTML =
-      (`<input type="button"  value="play game">`)
-         addEventListener("click",startClick)        
-         addEventListener("click",interval)
-       
-    }
-    
+ 
 //eventos iniciais
     function startClick(){
         addEventListener("keydown",mykeyBoard,false);
@@ -137,151 +129,9 @@ var world = [
        
    } 
 	function mykeyBoard(e){
-        let front = world[covid.y][covid.x+1];
-        let back =  world[covid.y][covid.x-1];
-        let over = world[covid.y-1][covid.x];
-        let under = world[covid.y+1][covid.x];
+     
        //movimento normal 
-      if(e.keyCode==btn_right && front=== brick || front === brick3d){
-          right=false;
-          console.log("right",right);
-
-      }
-      else if(e.keyCode==btn_right && front=== eaten || front === meal){
-          right=true;
-         console.log("right",right);
-         
-       
-      }
-      else if(e.keyCode==left && back=== brick || back ===brick3d){
-          left=false
-          console.log("left",left);
-          
-          
-      }
-      else if(e.keyCode==btn_left && back === eaten || back ===meal){
-          left=true
-          console.log("left",left);
-          
-      }
-      else if(e.keyCode==btn_up && over === brick || over ===brick3d){
-          up=false;
-        console.log("up",up);
-              }
-      else if(e.keyCode==btn_up && over === meal || over === eaten){
-          up =true
-        console.log("up",up);
-        
-      }
-      else if(e.keyCode==btn_down && under === brick || under === brick3d){
-          down=false
-         console.log("down",down);
-         
-      }
-      else if(e.keyCode==btn_down && under === meal || under === eaten){
-          down=true;
-          console.log("down",down);
-          
-      }
-
-      //edge left
-      
-      else if(e.keyCode==btn_left && over==brick || over==brick3d){
-          up=false;
-          console.log("up permitido",up);
-      }
-      else if(e.keyCode==btn_left && under==brick|| under==brick3d){
-          down=false;
-          console.log("down permitido",down);
-      }
-      else if(e.keyCode==btn_left && over == meal || over==eaten){
-          up=true
-          console.log("up permitido",up);
-      }
-      else if(e.keyCode==btn_left && under == meal || under == eaten ){
-          down=true;
-          console.log("down permitido",down);
-          
-      }
-    //edge right
-    else if(e.keyCode==btn_right && over==brick || over==brick3d){
-        up=false;
-        console.log("up negado",up);
-    }
-    else if(e.keyCode==btn_right && under==brick|| under==brick3d){
-        down=false;
-        console.log("down negado",down);
-    }
-    else if(e.keyCode==btn_right && over == meal || over==eaten){
-        up=true
-        console.log("up permitido",up);
-    }
-    else if(e.keyCode==btn_right && under == meal || under == eaten ){
-        down=true;
-        console.log("down permitido",down);
-        
-    }
-    //edge up
-    else if(e.keyCode==btn_up && front==brick || front==brick3d){
-       right=false
-        console.log("right negado",right);
-
-        
-    }
-    else if(e.keyCode==btn_up && back==brick || back==brick3d){
-        left=false;
-        console.log("left negado",left);
-        
-    }
-    else if(e.keyCode==btn_up && front ==meal || front==eaten){
-        right=true;
-        console.log("right permitido",right);
-    }
-    else if(e.keyCode==btn_up && back == meal || back == eaten){
-        left=true;
-        console.log("left permitido",left);
-        
-    }
-    // edge down
-    else if(e.keyCode==btn_down && front==brick || front==brick3d){
-        right=false
-         console.log("right negado",right);
- 
-         
-     }
-     else if(e.keyCode==btn_down && back==brick || back==brick3d){
-         left=false;
-         console.log("left negado",left);
-         
-     }
-     else if(e.keyCode==btn_down && front ==meal || front==eaten){
-         right=true;
-         console.log("right permitido",right);
-     }
-     else if(e.keyCode==btn_down && back == meal || back == eaten){
-         left=true;
-         
-         console.log("left permitido",left);
-         
-     }
-
-        
-      
- 
-else if( e.keyCode ==btn_left || e.keyCode ==btn_right){
-directionX = true;
-directionY=false;
-}
-else if(e.keyCode == btn_up || e.keyCode == btn_down){
-directionY=true;
-directionX=false;
-}
     
-      
-           
-           
-             
-             
        
         
        
@@ -513,7 +363,7 @@ directionX=false;
            world[covid.y][covid.x] = 0;
          
            scoreBehaviour();
-           drawWorld();
+            drawWorld();
             displayScore();
             const audio = document.getElementById('comer')
             audio.play();
@@ -617,3 +467,13 @@ function allowMovePoisonDown(){
         }
 
 }
+
+function main(){    
+     
+    document.querySelector('#iniciar').innerHTML =
+     (`<input type="button"  value="play game">`)
+        addEventListener("click",startClick)        
+        addEventListener("click",interval)
+      
+   }
+   
